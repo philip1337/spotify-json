@@ -109,7 +109,7 @@ add_library(${json_library_TARGET} STATIC ${json_all_HEADERS} ${json_all_SOURCES
 target_include_directories(${json_library_TARGET} PUBLIC ${json_INCLUDE_DIR})
 
 if(WIN32)
-  target_compile_options(${json_library_TARGET} PRIVATE "/MT$<$<CONFIG:Debug>:d>")
+  #target_compile_options(${json_library_TARGET} PRIVATE "/MT$<$<CONFIG:Debug>:d>")
 endif()
 
 option(SPOTIFY_JSON_USE_SSE42 "Build library with SSE 4.2 support (on x86 and x86-64 platforms)" ON)
